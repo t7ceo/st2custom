@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 페이지 문자셋 -->	
+		<meta charset="euc-kr">		
+		<!-- 브라우저 뷰포트 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		
+		<title>Sencha Touch</title>
+		
+		<!--안드로이드 바로가기 아이콘  -->
+		<link rel="shortcut icon" href="../image/icon.png">		
+		<!--애플 바로가기 아이콘  -->
+		<link rel="apple-touch-icon" href="../image/icon.png">	
+		
+		<!-- Sencha Touch 2 프레임워크-->		
+		<link rel="stylesheet" type="text/css" href="./framework/resources/css/sencha-touch.css">
+		<script type="text/javascript" src="./framework/sencha-touch-all.js"></script>
+		
+		<!-- 웹앱 초기화  -->
+		<script type="text/javascript">
+
+		Ext.Loader.setConfig({ enabled: true });
+		Ext.application({
+			name: "MyApp",
+			/*
+			icon: {
+				57: "../image/icon.png",
+				72: "../image/icon~ipad.png",
+				114: "../image/icon@2x.png",
+			},
+			*/
+			launch: function() {
+				alert("launch-run");
+			}
+		});
+		
+		</script>						
+	</head>
+	<body>	
+	</body>
+</html>

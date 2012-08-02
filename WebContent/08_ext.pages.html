@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<title>Sencha Touch</title>
+		
+		<link rel="shortcut icon" href="./image/icon.png">
+		<link rel="apple-touch-icon" href="./image/icon.png">
+		
+		<link rel="stylesheet" type="text/css" href="./framework/resources/css/sencha-touch.css">
+		<script type="text/javascript" src="./framework/sencha-touch-all.js"></script>	
+
+		<script type="text/javascript">
+			Ext.Loader.setConfig({ enabled: true });	
+			Ext.require("HomeView");
+			Ext.require("LoginView");
+			Ext.require("ListView");
+			Ext.require("Ext.tab.Panel");
+		</script>
+		
+		<script type="text/javascript">	
+			Ext.application({
+				name: "MyApp",
+				launch: function() {
+					var homeView = Ext.create("HomeView");
+					var loginView = Ext.create("LoginView");
+					var listView = Ext.create("ListView");
+
+					var tabPanel = Ext.create("Ext.tab.Panel", {
+						items: [ homeView, loginView, listView ]
+					});
+					Ext.Viewport.add(tabPanel);
+				}
+			});
+		</script>	
+	</head>		
+	<body>	
+	</body>
+</html>
